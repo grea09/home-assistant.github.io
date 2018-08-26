@@ -31,6 +31,7 @@ sensor:
 
 Configuration variables:
 
+- **name** (*Optional*): The name of the sensor.
 - **hostname** (*Optional*): The hostname for which to perform the DNS query. Default: `myip.opendns.com` (special hostname that resolves to your public IP)
 - **resolver** (*Optional*): The DNS server to target the query at. Default: `208.67.222.222` (OpenDNS)
 - **ipv6** (*Optional*): Set this to `true` or `false` if IPv6 should be used. When resolving the public IP, this will be the IP of the machine where Home Assistant is running on.
@@ -46,6 +47,7 @@ sensor:
   - platform: dnsip
   # Resolve IP address of home-assistant.io via Google DNS
   - platform: dnsip
+    name: home_assistant
     hostname: home-assistant.io
     resolver: 8.8.8.8
 ```
